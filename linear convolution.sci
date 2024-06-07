@@ -1,0 +1,11 @@
+g= input ('Type the first sequence');
+h=input ('Type the Second sequence');
+ga=[g zeros(1,length(h)-1)];
+ha=[h zeros(1,length(g)-1)];
+G=fft(ga);
+H=fft(ha);
+Y=G.*H;
+y=ifft(Y);
+disp('New Sequence');
+disp (y);
+disp(real(y));
